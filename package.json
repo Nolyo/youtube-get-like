@@ -1,0 +1,32 @@
+{
+  "name": "like-yt-puppeteer",
+  "version": "1.0.0",
+  "description": "Get number like in video / live",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "puppeteer": "^10.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node dev.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Nolyo/youtube-get-like.git"
+  },
+  "keywords": [
+    "youtube",
+    "like",
+    "thumbs",
+    "up"
+  ],
+  "author": "Yohann JAFFRES",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nolyo/youtube-get-like/issues"
+  },
+  "homepage": "https://github.com/Nolyo/youtube-get-like#readme"
+}
