@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "dependencies": {
+    "fs": "0.0.1-security",
     "mysql": "^2.18.1",
     "puppeteer": "^10.4.0"
   },

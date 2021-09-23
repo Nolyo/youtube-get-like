@@ -1,7 +1,7 @@
-import mysql from "mysql";
+import {getPool} from "./connexionDB.js";
 
 export default async function saveDb(countTotal) {
-    return new Promise(resole => {
+    /*return new Promise(resole => {
         const con = mysql.createConnection({
             host: "localhost",
             user: "root",
@@ -30,5 +30,23 @@ export default async function saveDb(countTotal) {
             });
             resole();
         });
+    });*/
+    return new Promise(resole => {
+        let pool = getPool();
+        pool.getConnection(function (err, con) {
+            //Check if table exist and create else
+            con.query("CREATE TABLE IF NOT EXISTS countlike (id INT AUTO_INCREMENT PRIMARY KEY, count VARCHAR(255))", function (err, result) {
+                if (err) throw err;
+                console.log("Table created");
+            });
+
+            // Insert in DB
+            const insert = "INSERT INTO countlike (`count`) VALUES (" + countTotal + ")";
+            con.query(insert, function (err, result) {
+                if (err) throw err;
+                console.log("record inserted");
+            });
+        });
+        resole();
     });
 }
