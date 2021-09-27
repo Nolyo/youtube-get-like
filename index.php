@@ -16,6 +16,12 @@
     </style>
 </head>
 <body>
-    <div id="app"> {{ count }} </div>
+<div id="channel">
+    <form>
+        <input type="text" name="v" placeholder="Live ID / Video ID">
+        <input type="submit" value="Analyse">
+    </form>
+</div>
+<div id="app"> {{ count }} </div>
 </body>
 </html>
