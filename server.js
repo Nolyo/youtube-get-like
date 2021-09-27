@@ -7,6 +7,7 @@ http.createServer(async (request, response) => {
     response.writeHead('200', {
         'Content-type': 'text/html; charset=utf-8'
     });
+    console.log("Connected")
 
     fs.readFile('index.html', 'utf-8', async (err, data) => {
         if (err) {
