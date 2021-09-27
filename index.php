@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Nombre de Like Yt</title>
-    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="refresh" content="15">
     <style>
         #app {
             color: blue;
